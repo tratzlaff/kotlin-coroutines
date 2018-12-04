@@ -7,14 +7,16 @@ import runExample
 fun main(args: Array<String>) {
     runExample(::channelExample)
     runExample(::channelCloseExample)
-    runExample(::fanOutExample)
-    runExample(::fanInExample)
 }
 
 /**
  * A Channel is conceptually very similar to a BlockingQueue.
  * Instead of a blocking put operation, it has a suspending send.
  * Instead of a blocking take operation, it has a suspending receive.
+ *
+ * Unbuffered channels transfer elements when sender and receiver meet each other (aka rendezvous).
+ * If send is invoked first, then it is suspended until receive is invoked.
+ * If receive is invoked first, it is suspended until send is invoked.
  */
 fun channelExample() = runBlocking {
 
