@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.11'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
 }
 
 group 'com.tratzlaff.kotlin.coroutines'
@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1'
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
 }
 
 compileKotlin {

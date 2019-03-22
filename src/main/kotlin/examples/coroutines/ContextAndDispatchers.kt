@@ -5,7 +5,6 @@ import runExample
 
 fun main(args: Array<String>) {
     runExample(::dispatchersAndThreadsExample)
-
 }
 
 /**
