@@ -37,7 +37,8 @@ fun firstCoroutineExample() {
 }
 
 /**
- * coroutines.examples.firstCoroutineExample can be rewritten in a more idiomatic way, using runBlocking to wrap the execution of the coroutines.examples.main function.
+ * coroutines.examples.firstCoroutineExample can be rewritten in a more idiomatic way,
+ * using runBlocking to wrap the execution of the coroutines.examples.main function.
  * Here, the runBlocking<Unit> {...} works as an adaptor that is used to start the top-level coroutines.examples.main coroutine.
  * We explicitly specify its Unit return type, because a well-formed coroutines.examples.main function in Kotlin has to return Unit.
  *
@@ -54,7 +55,7 @@ fun wrapInRunBlockingExample() = runBlocking<Unit> {
 }
 
 /**
- * The above two examples both delay for a time while another coroutine is working. That is not a good approach.
+ * The above two examples both delay for a time while another coroutine is working. That is NOT a good approach.
  * Here, we explicitly wait (in a non-blocking way) until the background job that we have launched is complete.
  *
  * Not ideal because we are using GlobalScope.
@@ -73,7 +74,7 @@ fun waitingForAJobExample() = runBlocking {
  * Even though it is light-weight, it still consumes memory resources while it runs.
  * Having to manually keep reference to all the launched coroutines and join them is error prone.
  *
- * A better solution is to use structured concurrency.
+ * A better solution is to use "structured concurrency".
  * Instead of launching coroutines in the GlobalScope, just like we do with threads (threads are always global),
  * we can launch coroutines in the specific scope of the operation we are performing!
  *
