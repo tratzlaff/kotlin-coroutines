@@ -5,6 +5,7 @@ import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.produce
 import runExample
 
+@ExperimentalCoroutinesApi
 fun main(args: Array<String>) {
     runExample(::fanOutExample)
 }
@@ -13,6 +14,7 @@ fun main(args: Array<String>) {
  * Multiple coroutines may receive from the same channel, distributing work between themselves.
  * Here we launch five processors and let them work for almost a second.
  */
+@ExperimentalCoroutinesApi
 fun fanOutExample() = runBlocking<Unit> {
     val producer = produceNumbers()
     repeat(5) { launchProcessor(it, producer) }
@@ -26,6 +28,7 @@ fun fanOutExample() = runBlocking<Unit> {
 }
 
 /** This producer coroutine periodically produces integers (ten per second). */
+@ExperimentalCoroutinesApi
 fun CoroutineScope.produceNumbers() = produce<Int> {
     var x = 1 // start from 1
     while (true) {

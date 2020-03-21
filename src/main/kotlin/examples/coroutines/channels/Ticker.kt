@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.ticker
 import runExample
 
+@ObsoleteCoroutinesApi
 fun main(args: Array<String>) {
     runExample(::tickerExample)
 }
@@ -25,6 +26,7 @@ fun main(args: Array<String>) {
  *
  * Optionally, a mode parameter equal to TickerMode.FIXED_DELAY can be specified to maintain a fixed delay between elements.
  */
+@ObsoleteCoroutinesApi
 fun tickerExample() = runBlocking {
     val tickerChannel = ticker(delayMillis = 100, initialDelayMillis = 0) // create ticker channel
 

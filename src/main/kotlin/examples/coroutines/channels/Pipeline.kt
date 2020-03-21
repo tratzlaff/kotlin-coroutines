@@ -5,6 +5,7 @@ import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.produce
 import runExample
 
+@ExperimentalCoroutinesApi
 fun main(args: Array<String>) {
     runExample(::pipelinePatternExample)
     runExample(::primeExample)

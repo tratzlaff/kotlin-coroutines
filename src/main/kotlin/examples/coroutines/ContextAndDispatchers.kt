@@ -3,6 +3,7 @@ package examples.coroutines
 import kotlinx.coroutines.*
 import runExample
 
+@ObsoleteCoroutinesApi
 fun main(args: Array<String>) {
     runExample(::dispatchersAndThreadsExample)
 }
@@ -16,6 +17,7 @@ fun main(args: Array<String>) {
  * All coroutine builders like launch and async accept an optional CoroutineContext parameter
  * that can be used to explicitly specify the dispatcher for new coroutine and other context elements.
  */
+@ObsoleteCoroutinesApi
 fun dispatchersAndThreadsExample() = runBlocking<Unit> {
 
     // When launch { ... } is used without parameters, it inherits the context (and thus dispatcher)
