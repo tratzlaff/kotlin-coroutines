@@ -5,7 +5,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.SendChannel
 import runExample
 
-fun main(args: Array<String>) {
+fun main() {
     runExample(::fanInExample)
 }
 

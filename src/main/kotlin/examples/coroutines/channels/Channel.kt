@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import runExample
 
-fun main(args: Array<String>) {
+fun main() {
     runExample(::channelExample)
     runExample(::channelCloseExample)
 }

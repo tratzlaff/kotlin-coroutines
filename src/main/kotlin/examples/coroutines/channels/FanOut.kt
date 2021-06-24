@@ -6,7 +6,7 @@ import kotlinx.coroutines.channels.produce
 import runExample
 
 @ExperimentalCoroutinesApi
-fun main(args: Array<String>) {
+fun main() {
     runExample(::fanOutExample)
 }
 

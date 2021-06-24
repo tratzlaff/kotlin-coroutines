@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 import runExample
 
 @ObsoleteCoroutinesApi
-fun main(args: Array<String>) {
+fun main() {
     runExample(::dispatchersAndThreadsExample)
 }
 

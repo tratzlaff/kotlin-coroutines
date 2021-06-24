@@ -5,7 +5,7 @@ import runExample
 import java.util.concurrent.atomic.AtomicLong
 import kotlin.concurrent.thread
 
-fun main(args: Array<String>) {
+fun main() {
     runExample(::coroutinesMightNotFinishBeforeResultIsOutputExample)
     runExample(::asyncExample)
 }

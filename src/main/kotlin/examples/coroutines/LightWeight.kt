@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 import runExample
 import kotlin.concurrent.thread
 
-fun main(args: Array<String>) {
+fun main() {
     runExample(::threadsExample, true)
     runExample(::coroutinesExample, true)
 }

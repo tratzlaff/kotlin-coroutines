@@ -5,7 +5,7 @@ import kotlinx.coroutines.channels.ticker
 import runExample
 
 @ObsoleteCoroutinesApi
-fun main(args: Array<String>) {
+fun main() {
     runExample(::tickerExample)
 }
 

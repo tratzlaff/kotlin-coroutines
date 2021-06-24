@@ -3,7 +3,7 @@ package examples.coroutines
 import kotlinx.coroutines.*
 import runExample
 
-fun main(args: Array<String>) {
+fun main() {
     runExample(::extractFunctionRefactoringExample)
     runExample(::sequentialByDefaultExample)
     runExample(::concurrentUsingAsyncExample)
